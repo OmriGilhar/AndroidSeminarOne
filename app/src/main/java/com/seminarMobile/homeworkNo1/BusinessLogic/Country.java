@@ -1,4 +1,4 @@
-package com.example.myapplication.BusinessLogic;
+package com.seminarMobile.homeworkNo1.BusinessLogic;
 
 public class Country {
     private String englishName;

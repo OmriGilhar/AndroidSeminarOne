@@ -1,6 +1,6 @@
-package com.example.myapplication.Utils;
+package com.seminarMobile.homeworkNo1.Utils;
 
-import com.example.myapplication.BusinessLogic.Country;
+import com.seminarMobile.homeworkNo1.BusinessLogic.Country;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CountryJsonParser {
-
     public static List<Country> parseAllCountries(JSONArray responseJson){
         List<Country> parsedCountries = new ArrayList<>();
         try{

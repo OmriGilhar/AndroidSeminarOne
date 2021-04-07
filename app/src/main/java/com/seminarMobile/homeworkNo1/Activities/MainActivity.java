@@ -1,4 +1,4 @@
-package com.example.myapplication.Activities;
+package com.seminarMobile.homeworkNo1.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,10 +12,10 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.myapplication.Utils.CountriesAdapter;
-import com.example.myapplication.BusinessLogic.Country;
-import com.example.myapplication.Utils.CountryJsonParser;
-import com.example.myapplication.R;
+import com.seminarMobile.homeworkNo1.Utils.CountriesAdapter;
+import com.seminarMobile.homeworkNo1.BusinessLogic.Country;
+import com.seminarMobile.homeworkNo1.Utils.CountryJsonParser;
+import com.seminarMobile.homeworkNo1.R;
 
 import java.util.List;
 

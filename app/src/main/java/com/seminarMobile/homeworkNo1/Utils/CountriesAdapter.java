@@ -1,4 +1,4 @@
-package com.example.myapplication.Utils;
+package com.seminarMobile.homeworkNo1.Utils;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.Activities.CountryActivity;
-import com.example.myapplication.BusinessLogic.Country;
-import com.example.myapplication.R;
+import com.seminarMobile.homeworkNo1.Activities.CountryActivity;
+import com.seminarMobile.homeworkNo1.BusinessLogic.Country;
+import com.seminarMobile.homeworkNo1.R;
 
 import java.util.List;
 

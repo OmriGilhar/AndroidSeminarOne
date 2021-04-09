@@ -13,10 +13,10 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.seminarMobile.homeworkNo1.BusinessLogic.Country;
+import com.seminarMobile.homeworkNo1.Models.Country;
 import com.seminarMobile.homeworkNo1.R;
-import com.seminarMobile.homeworkNo1.Utils.CountriesAdapter;
-import com.seminarMobile.homeworkNo1.Utils.CountryJsonParser;
+import com.seminarMobile.homeworkNo1.Adapters.CountriesAdapter;
+import com.seminarMobile.homeworkNo1.Services.CountryService;
 
 import org.json.JSONException;
 
@@ -67,7 +67,7 @@ public class CountryActivity extends AppCompatActivity {
                 requestURL,
                 null,
                 response -> {
-                    borderedCountriesNames = CountryJsonParser.parseBorderedCountries(response);
+                    borderedCountriesNames = CountryService.parseBorderedCountries(response);
                     for(String border: borderedCountriesNames){
                         String requestBorderURL = "https://restcountries.eu/rest/v2/alpha/" + border.toLowerCase();
                         requestCountry(requestBorderURL, requestQueue);

@@ -1,4 +1,4 @@
-package com.seminarMobile.homeworkNo1.BusinessLogic;
+package com.seminarMobile.homeworkNo1.Models;
 
 import org.junit.Assert;
 import org.junit.Test;

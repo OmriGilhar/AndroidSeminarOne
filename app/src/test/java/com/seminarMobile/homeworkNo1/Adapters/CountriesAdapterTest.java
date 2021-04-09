@@ -1,6 +1,7 @@
-package com.seminarMobile.homeworkNo1.Utils;
+package com.seminarMobile.homeworkNo1.Adapters;
 
-import com.seminarMobile.homeworkNo1.BusinessLogic.Country;
+import com.seminarMobile.homeworkNo1.Models.Country;
+import com.seminarMobile.homeworkNo1.Services.CountryService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -10,8 +11,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class CountryJsonParserTest {
-
+public class CountriesAdapterTest {
     @Test
     public void parseAllCountries() throws JSONException {
         List<Country> countriesClassMock;
@@ -33,7 +33,7 @@ public class CountryJsonParserTest {
         countriesMock.put(countryNo2);
         countriesMock.put(countryNo3);
 
-        countriesClassMock = CountryJsonParser.parseAllCountries(countriesMock);
+        countriesClassMock = CountryService.parseAllCountries(countriesMock);
         Assert.assertEquals(countriesClassMock.get(0).getEnglishName(), "Israel");
         Assert.assertEquals(countriesClassMock.get(0).getNativeName(), "ישראל");
 
@@ -59,7 +59,7 @@ public class CountryJsonParserTest {
         JSONArray testInput = new JSONArray();
         testInput.put(countryDetails);
 
-        countriesBorderedMock = CountryJsonParser.parseBorderedCountries(testInput);
+        countriesBorderedMock = CountryService.parseBorderedCountries(testInput);
 
         Assert.assertEquals("ISR", countriesBorderedMock.get(0));
         Assert.assertEquals("JPN", countriesBorderedMock.get(1));

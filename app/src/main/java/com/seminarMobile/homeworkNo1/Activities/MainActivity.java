@@ -12,15 +12,14 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.seminarMobile.homeworkNo1.Utils.CountriesAdapter;
-import com.seminarMobile.homeworkNo1.BusinessLogic.Country;
-import com.seminarMobile.homeworkNo1.Utils.CountryJsonParser;
+import com.seminarMobile.homeworkNo1.Adapters.CountriesAdapter;
+import com.seminarMobile.homeworkNo1.Models.Country;
+import com.seminarMobile.homeworkNo1.Services.CountryService;
 import com.seminarMobile.homeworkNo1.R;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
     private TextView main_TXT_title;
     private RecyclerView main_RYC_countries;
     private List<Country> countries;
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 requestURL,
                 null,
                 response -> {
-                    countries = CountryJsonParser.parseAllCountries(response);
+                    countries = CountryService.parseAllCountries(response);
                     fillCountriesView();
                 },
                 error -> Log.println(Log.ERROR, "Main:Error", "Request Error" + error.toString()));

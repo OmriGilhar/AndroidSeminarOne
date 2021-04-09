@@ -1,4 +1,4 @@
-package com.seminarMobile.homeworkNo1.Utils;
+package com.seminarMobile.homeworkNo1.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,18 +9,18 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.seminarMobile.homeworkNo1.Activities.CountryActivity;
-import com.seminarMobile.homeworkNo1.BusinessLogic.Country;
+import com.seminarMobile.homeworkNo1.Models.Country;
 import com.seminarMobile.homeworkNo1.R;
 
 import java.util.List;
 
 public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.ViewHolder> {
-
-    private List<Country> countries;
-    private LayoutInflater mInflater;
+    private final List<Country> countries;
+    private final LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
@@ -30,8 +30,9 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
     }
 
     // inflates the row layout from xml when needed
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.country_list, parent, false);
         return new ViewHolder(view);
     }

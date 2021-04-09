@@ -1,12 +1,12 @@
-package com.seminarMobile.homeworkNo1.BusinessLogic;
+package com.seminarMobile.homeworkNo1.Models;
 
 public class Country {
     private String englishName;
     private String nativeName;
 
-    public void Country(){}
+    public Country(){}
 
-    public void Country(String englishName, String nativeName){
+    public Country(String englishName, String nativeName){
         this.setEnglishName(englishName);
         this.setNativeName(nativeName);
     }
